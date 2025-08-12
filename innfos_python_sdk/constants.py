@@ -1,0 +1,69 @@
+"""
+Constants for the INNFOS Python SDK
+"""
+
+class ErrorsDefine:
+    """Error codes defined in the SDK"""
+    ERR_NONE = 0
+    ERR_ACTUATOR_OVERVOLTAGE = 0x01
+    ERR_ACTUATOR_UNDERVOLTAGE = 0x02
+    ERR_ACTUATOR_LOCKED_ROTOR = 0x04
+    ERR_ACTUATOR_OVERHEATING = 0x08
+    ERR_ACTUATOR_READ_OR_WRITE = 0x10
+    ERR_ACTUATOR_MULTI_TURN = 0x20
+    ERR_INVERTOR_TEMPERATURE_SENSOR = 0x40
+    ERR_CAN_COMMUNICATION = 0x80
+    ERR_ACTUATOR_TEMPERATURE_SENSOR = 0x100
+    ERR_STEP_OVER = 0x200
+    ERR_DRV_PROTECTION = 0x400
+    ERR_CODER_DISABLED = 0x800
+    ERR_ACTUATOR_DISCONNECTION = 0x801
+    ERR_CAN_DISCONNECTION = 0x802
+    ERR_IP_ADDRESS_NOT_FOUND = 0x803
+    ERR_ABNORMAL_SHUTDOWN = 0x804
+    ERR_SHUTDOWN_SAVING = 0x805
+    ERR_IP_HAS_BIND = 0x806
+    ERR_IP_CONFLICT = 0x808
+    ERR_ID_UNUNIQUE = 0x807
+    ERR_UNKNOWN = 0xffff
+
+class ControlMode:
+    """Control modes for the actuators"""
+    CURRENT_MODE = 0x01
+    SPEED_MODE = 0x02
+    POSITION_MODE = 0x03
+    TRAPEZOIDAL_POSITION_MODE = 0x06
+    TRAPEZOIDAL_SPEED_MODE = 0x07
+    HOMING_MODE = 0x08
+
+class Command:
+    """Command codes for communication with actuators"""
+    # Read commands
+    HANDSHAKE = 0x00
+    READ_MODE = 0x55
+    READ_VOLTAGE = 0x45
+    READ_CURRENT = 0x04
+    READ_SPEED = 0x05
+    READ_POSITION = 0x06
+    READ_TEMPERATURE = 0x5F
+    
+    # Write commands
+    SET_MODE = 0x07
+    ENABLE_ACTUATOR = 0x2A
+    SET_CURRENT = 0x08
+    SET_SPEED = 0x09
+    SET_POSITION = 0x0A
+    STORE_PARAMETERS = 0x0D
+    
+    # Special commands
+    QUERY_ACTUATORS = 0x02
+    CLEAR_ALARM = 0xFE
+
+# Protocol constants
+PROTOCOL = {
+    'HEADER': 0xEE,
+    'TAIL': 0xED,
+    'BROADCAST_ID': 0x00,
+    'DEFAULT_PORT': 2000,
+    'DEFAULT_IP': '192.168.1.30'
+}

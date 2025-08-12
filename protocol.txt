@@ -1,0 +1,319 @@
+8/11/25, 10:09 AM                                              MINTASCA Wiki
+
+ 2
+
+
+
+
+     ECB & HUB
+
+       简介
+       资源概览
+       接口说明
+       外形尺寸
+       ECB 和 ECB_HUB的连接方式
+
+       连接多个ECB
+        修改IP和MAC地址
+       以太网IAP固件升级
+       资源
+       版本变更记录
+
+     简介
+     [ ↑ ] (pages/#md-page-menu)
+                    是一款以太网转CAN控制器，该控制器起到了以太网和CAN通信相互转换
+     ECB(Ethernet to CAN Bridge)
+     的网桥的作用。它采用          主控芯片。拥有丰富的扩展接口。以太网端口为标准RJ45以太
+                           STM32F429VET6
+     网接口，网络速度为        ，默认 地址为192.168.1.30，以太网通讯协议采用UDP协议，默认端
+                         10/100Mbps     IP
+     口号为 。 拥有两路独立的 总线，并且采用CAN隔离方案，通讯速率为1Mbps。通过两路独
+              2000 ECB              CAN
+     立的 总线，可以增加系统 通讯的带宽，减小通讯延迟，增加了系统的实时性，可以实现多个执
+            CAN                  CAN
+     行器串联的复杂闭环系统的控制。
+     ECB的原理图和BOM，以及以太网通讯协议全部开源，用户可以根据自己的需求，在ECB上直接进行开
+     发，大大提高了新产品的研发效率，从而加快新产品的上市时间。
+
+
+
+
+                                                           修改IP和MAC地址
+wiki.mintasca.com/wiki/cn/index.html#!pages/ECB&HUB_v2_2.md#                   1/10
+8/11/25, 10:09 AM                                              MINTASCA Wiki
+
+
+
+
+   (pages/../../img/ECB&HUB_v2_2PCBA1.png)
+
+
+
+
+                                                           修改IP和MAC地址
+wiki.mintasca.com/wiki/cn/index.html#!pages/ECB&HUB_v2_2.md#                   2/10
+8/11/25, 10:09 AM                                              MINTASCA Wiki
+
+
+
+
+   (pages/../../img/ECB&HUB_v2_2PCBA2.png)
+
+
+
+
+   (pages/../../img/ECB&HUB_v2_2PCBA3.png)
+
+                                                           修改IP和MAC地址
+wiki.mintasca.com/wiki/cn/index.html#!pages/ECB&HUB_v2_2.md#                   3/10
+   资源概览
+8/11/25, 10:09 AM                                                MINTASCA Wiki
+
+
+
+
+   [ ↑ ] (pages/#md-page-menu)
+           CPU:STM32F429VET6
+           RAM:256K
+           Flash:512K
+          以太网通讯： 路，     1自适应速率
+                            10/100M
+            通讯： 路，速率
+           CAN        2       1Mbps
+              个：电源指示 个，用户LED 5个，USB收发数据指示LED 2个，以太网连接状态指示
+           LED 12            LED 3
+             个，以太网速率指示 个
+           LED 1                  LED 1
+          功率信号复合接口 ： 个，单个复合接口同时包含CAN信号和功率信号
+                             6
+          扩展接口： 排     双排针，包含以下资源：
+                      2 2.54mm
+           I2C
+           SPI
+           USART
+          预留主控芯片引脚： 个，引脚包含复用功能，请参考附件的数据手册
+                             29
+
+
+      Note:
+      产品供电严禁超过最大输入电压；
+      产品应该放置在干燥的环境中保存，严谨日晒雨淋、摔、掷和跌落；
+      产品对静电敏感，静电可能会对芯片造成永久性损坏，用户在触摸产品之前，最好先将身体携带的
+      静电放掉，可以通过人体静电消除器或者把手放在墙壁上一段时间；
+
+   接口说明
+   [ ↑ ] (pages/#md-page-menu)
+
+
+   核心板管脚定义
+   P1 管脚定义
+     P1 PIN#         Name                 P1 PIN#         Name
+
+     1               PC0                  2               PB1
+
+     3               PA15                 4               PB15
+
+     5               PB14                 6               PB8
+
+     7               PE10                 8               PB7
+
+     9               PE8                  10              PE9
+
+     11              PE4                  12              PE5
+
+     13              PD15                 14              PE3
+
+     15              PD13                 16              PD14
+
+
+                                                           修改IP和MAC地址
+wiki.mintasca.com/wiki/cn/index.html#!pages/ECB&HUB_v2_2.md#                     4/10
+8/11/25, 10:09 AM                                               MINTASCA Wiki
+
+
+     P1 PIN#         Name                   P1 PIN#       Name
+
+     17              PD3                    18            PD4
+
+     19              PD1                    20            PD2
+
+
+   P2 管脚定义
+     P1 PIN#         Name               P1 PIN#         Name
+
+     1               PA5                2               PA3
+
+     3               PA6                4               PA4
+
+     5               AGND               6               PA0
+
+     7               PB3                8               PB4
+
+     9               PD3                10              PB9
+
+     11              PI2                12              PI3
+
+     13              PA8                14              PC9
+
+     15              PD6                16              VCC_5V
+
+     17              PD5                18              PB0
+
+     19              GND                20              PC7
+
+
+   接口规格型号
+   电源输入接口：Amass XT60PT-M
+   功率信号复合接口：Molex 430450827
+   USB接口：MicroUSB接口，韩荣U-F-M5DD-Y-L
+
+   以太网接口：标准RJ45连接器，连大精密L60055-14
+   外形尺寸
+   [ ↑ ] (pages/#md-page-menu)
+
+
+
+
+                                                           修改IP和MAC地址
+wiki.mintasca.com/wiki/cn/index.html#!pages/ECB&HUB_v2_2.md#                    5/10
+8/11/25, 10:09 AM                                              MINTASCA Wiki
+
+
+
+
+   (pages/../../img/ECB_v2_2PCB.png)
+
+
+
+
+   (pages/../../img/ECB_HUB_v2_2PCB.png)
+
+
+      Note:   单位为mm
+
+   ECB        和 ECB_HUB的连接方式
+   [ ↑ ] (pages/#md-page-menu)
+   方式一：
+                                                           修改IP和MAC地址
+wiki.mintasca.com/wiki/cn/index.html#!pages/ECB&HUB_v2_2.md#                   6/10
+8/11/25, 10:09 AM                                              MINTASCA Wiki
+
+
+
+
+   (pages/../../img/ECB&HUB_v2_2PCBA4.png)
+
+   方式二：
+
+
+
+
+   (pages/../../img/ECB&HUB_v2_2PCBA5.png)
+
+
+   连接多个ECB
+   [ ↑ ] (pages/#md-page-menu)
+
+
+
+
+                                                           修改IP和MAC地址
+wiki.mintasca.com/wiki/cn/index.html#!pages/ECB&HUB_v2_2.md#                   7/10
+8/11/25, 10:09 AM                                              MINTASCA Wiki
+
+
+
+
+   (pages/../../img/ECB&HUB_v2_2PCBA6.png)
+
+
+         多个 连接同一电脑,ECB的IP和MAC地址不能有重复，修改ECB的IP和MAC地址请访问 修
+      Note: ECB
+      改 和 地址
+       IP MAC
+
+
+
+   修改IP和MAC地址
+   [ ↑ ] (pages/#md-page-menu)
+
+   下载
+          访问该链接download link (https://github.com/mintasca/ipChangeTool .git)下载SDK相关文件或者直
+          接执行以下命令
+      $ git clone https://github.com/mintasca/ipChangeTool.git
+
+
+
+          进入ipChangeTool目录，修改ipChange的权限：
+      chmod 777 ipChange
+
+
+
+          确认有且只有一个ECB或者ECU已经连接到电脑并且上电后，执行命令：
+      ./ipChange -ip=<1~255> -mac=<1~255>
+
+
+
+          请注意只能修改IP或者MAC地址的最后一个数。比如ECB的IP地址是192.168.1.30，只能用该工具
+          将30修改成其他数字。
+
+                                                           修改IP和MAC地址
+wiki.mintasca.com/wiki/cn/index.html#!pages/ECB&HUB_v2_2.md#                           8/10
+          以太网IAP固件升级
+8/11/25, 10:09 AM                                              MINTASCA Wiki
+
+
+
+
+          [ ↑ ] (pages/#md-page-menu)
+          系统启动： 上电后，默认进入bootloader程序，5秒后会自动跳转到用户程序运行，如果ROM
+                       ECB
+          中没有用户程序，系统会一直运行在bootloader程序中。
+          以太网IAP软件：使用以太网IAP软件，可以对ECB进行固件升级，软件的下载以及使用说明，请参
+          考以下链接：
+          用户程序擦除：当系统处于bootloader程序中，可以通过以太网IAP软件对用户程序进行擦除。
+          用户程序跳转到bootloader程序：当系统运行在用户程序时，通过以太网IAP软件，可以将系统跳
+          转回bootloader程序中，如果跳转成功，除非系统复位或者成功升级固件，否则系统会一直运行在
+          bootloader程序中。
+          固件升级：当系统处于bootloader程序中，可以使用以太网IAP软件，对ECB进行固件升级。
+          资源
+          [ ↑ ] (pages/#md-page-menu)
+          ECB_SCH (pages/../../img/ECB_v2_2.pdf) ECB_HUB_SCH (pages/../../img/ECB_HUB_v2_2.pdf)
+          ECB_Core (pages/../../img/ECB_Core_v2_0.pdf)
+          STM32F429     数据表    (pages/../../img/STM32F429VIT6.PDF)
+
+
+   版本变更记录
+   [ ↑ ] (pages/#md-page-menu)
+   下表简单描述了版本变更记录
+     版本号 更新时间                  更改类型                位置          更新内容
+     V2.2.4         2019.07.05 添加                  资源          添加ECB_Core原理图
+     V2.2.3         19.05.30   修改                    和
+                                                   ECB         修改图片
+                                                   ECB_HUB
+                                                   的连接方
+                                                   式
+                                  修改               连接多个 修改图片
+                                                   ECB
+
+     V2.2.2         19.05.29      修改               简介          修改简介图片
+                                  修改               外形尺寸        修改图片
+                                  添加               接口规格        添加接口具体型号
+                                                   型号
+     V2.2.1         2019.05.28 删除                  接口说明        删除Alternate functions
+     V2.2.0         2019.05.02 添加                  ECB &       全文添加
+                                                   HUB
+
+
+                                                           修改IP和MAC地址
+wiki.mintasca.com/wiki/cn/index.html#!pages/ECB&HUB_v2_2.md#                                      9/10
+8/11/25, 10:09 AM                                                  MINTASCA Wiki
+
+
+                                     Copyright © 2018 mintasca.com. All rights reserved.
+
+
+
+
+wiki.mintasca.com/wiki/cn/index.html#!pages/ECB&HUB_v2_2.md# 修改IP和MAC地址                    10/10
+
