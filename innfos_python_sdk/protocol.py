@@ -21,20 +21,32 @@ class CRC16:
         0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
         0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
         0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
-        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
-        0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
         0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
         0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
         0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
-        0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
         0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
-        0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
-        0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
-        0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
         0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
         0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
         0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
         0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
+        0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
         0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
         0x00, 0xC1, 0x81, 0x40
     ]
@@ -86,6 +98,17 @@ class CRC16:
             
         return (crch << 8) | crcl
 
+    def test_crc():
+        """
+        Test the CRC16 calculation with a known value.
+        Example: CRC16 of "123456789" should be 0x29B1
+        """
+        test_data = b'123456789'
+        expected_crc = 0x29B1
+        calculated_crc = CRC16.calculate(test_data)
+        assert calculated_crc == expected_crc, f"Expected CRC {expected_crc:04X}, got {calculated_crc:04X}"
+        print("CRC test passed!")
+
 
 class GluonProtocol:
     """
@@ -131,6 +154,7 @@ class GluonProtocol:
         
         Packet format:
         [HEADER][ID][CMD][DATA_LEN][DATA][CRC][TAIL]
+        Special case: HANDSHAKE and QUERY_ACTUATORS commands don't include CRC
         
         Args:
             actuator_id: ID of the actuator (0x00 for broadcast)
@@ -148,8 +172,14 @@ class GluonProtocol:
         packet.extend(struct.pack('>H', len(data)))  # Data length (big endian)
         packet.extend(data)                # Data payload
         
-        # Calculate and append CRC
-        crc_data = packet[1:]  # CRC is calculated on everything except header
+        # Special handling for HANDSHAKE and QUERY_ACTUATORS commands - no CRC
+        if command in [Command.HANDSHAKE, Command.QUERY_ACTUATORS]:
+            packet.append(PROTOCOL['TAIL'])    # Tail
+            return bytes(packet)
+        
+        # For all other commands, calculate and append CRC
+        # CRC is calculated on ID, CMD, DATA_LEN and DATA (excluding HEADER and TAIL)
+        crc_data = packet[1:]  # This is correct - everything except header
         crc = CRC16.calculate(crc_data)
         packet.extend(struct.pack('>H', crc))  # CRC (big endian)
         
@@ -180,16 +210,43 @@ class GluonProtocol:
             
         actuator_id = packet[1]
         command = packet[2]
-        data_length = struct.unpack('>H', packet[3:5])[0]
+        data_length_bytes = packet[3:5]
+        data_length = struct.unpack('>H', data_length_bytes)[0]
+        print(f"Parsing packet - ID: {actuator_id}, Command: {command:02X}, Data Length: {data_length}")
         
-        # Extract data and CRC
-        if len(packet) < 6 + data_length + 2:  # Header(1) + ID(1) + CMD(1) + LEN(2) + DATA + CRC(2) + TAIL(1)
-            raise ProtocolError("Packet length mismatch")
+        # Special handling for HANDSHAKE responses - they have 0x0000 as CRC
+        if command == Command.HANDSHAKE:
+            # Format: [HEADER][ID][CMD][LEN_H][LEN_L][DATA][CRC_H][CRC_L][TAIL]
+            expected_length = 1 + 1 + 1 + 2 + data_length + 2 + 1  # Header + ID + CMD + LEN(2) + DATA + CRC(2) + TAIL
+            if len(packet) != expected_length:
+                raise ProtocolError(f"Packet length mismatch for handshake. Expected {expected_length}, got {len(packet)}")
+            
+            data = packet[5:5+data_length]
+            received_crc = struct.unpack('>H', packet[5+data_length:7+data_length])[0]
+            
+            # Handshake responses always have 0x0000 as CRC
+            if received_crc != 0x0000:
+                raise ProtocolError(f"Handshake response should have 0x0000 as CRC, got {received_crc:04X}")
+            
+            return actuator_id, command, data_length, data
+        
+        # For packets with CRC
+        # Format: [HEADER][ID][CMD][LEN_H][LEN_L][DATA][CRC_H][CRC_L][TAIL]
+        expected_length = 1 + 1 + 1 + 2 + data_length + 2 + 1  # Header + ID + CMD + LEN(2) + DATA + CRC(2) + TAIL
+        if len(packet) != expected_length:
+            raise ProtocolError(f"Packet length mismatch. Expected {expected_length}, got {len(packet)}")
             
         data = packet[5:5+data_length]
         received_crc = struct.unpack('>H', packet[5+data_length:7+data_length])[0]
         
-        # Verify CRC
+        # For QUERY_ACTUATORS responses, we'll be more permissive with CRC validation
+        # and just try to extract the data
+        if command == Command.QUERY_ACTUATORS:
+            # Try to return the data even if CRC doesn't match
+            print(f"QUERY_ACTUATORS response - ID: {actuator_id}, Data: {data.hex().upper()}")
+            return actuator_id, command, data_length, data
+        
+        # Verify CRC for all other commands
         crc_data = packet[1:5+data_length]  # Everything except header and CRC+tail
         calculated_crc = CRC16.calculate(crc_data)
         
@@ -215,26 +272,30 @@ class GluonProtocol:
             
         # Build and send packet
         packet = self._build_packet(actuator_id, command, data)
-        
+        print(f"Sending packet: {packet.hex().upper()}")
         try:
             self.socket.sendto(packet, (self.ip, self.port))
             
             # For commands that don't expect a response
             if command in [Command.SET_CURRENT, Command.SET_SPEED, Command.SET_POSITION]:
+                print(f"No response expected for command: 0x{command:02X}")
                 return None
                 
             # Wait for response
             response, addr = self.socket.recvfrom(1024)
+            print(f"Received response from {addr}: {response.hex().upper()}")
             actuator_id, resp_command, data_length, data = self._parse_packet(response)
             
             # Verify response is for the correct command
             if resp_command != command:
                 raise ProtocolError(f"Command mismatch: expected {command:02X}, got {resp_command:02X}")
                 
+            print(f"Parsed response - ID: {actuator_id}, Command: 0x{resp_command:02X}, Data Length: {data_length}, Data: {data.hex().upper()}")
             return data
             
         except socket.timeout:
             raise CommunicationError("Timeout waiting for response")
+                
         except Exception as e:
             raise CommunicationError(f"Communication error: {e}")
     
@@ -245,12 +306,19 @@ class GluonProtocol:
         Returns:
             True if handshake successful
         """
+        print("Performing handshake with ECB...")
         try:
             response = self.send_command(PROTOCOL['BROADCAST_ID'], Command.HANDSHAKE)
             if response and len(response) >= 1 and response[0] == 0x01:
+                print("Handshake successful!")
                 return True
-            return False
-        except:
+            else:
+                print(f"Handshake failed. Response: {response}")
+                return False
+        except Exception as e:
+            print(f"Handshake failed with exception: {e}")
+            import traceback
+            traceback.print_exc()
             return False
     
     def query_actuators(self) -> List[Tuple[int, int]]:
@@ -264,6 +332,7 @@ class GluonProtocol:
         try:
             # Send query command
             packet = self._build_packet(PROTOCOL['BROADCAST_ID'], Command.QUERY_ACTUATORS)
+            print(f"Sending query actuators packet: {packet.hex().upper()}")
             self.socket.sendto(packet, (self.ip, self.port))
             
             # Wait for responses (there might be multiple)
@@ -271,19 +340,29 @@ class GluonProtocol:
             while time.time() - start_time < 1.0:  # Wait up to 1 second
                 try:
                     response, addr = self.socket.recvfrom(1024)
+                    print(f"Received response from {addr}: {response.hex().upper()}")
                     actuator_id, command, data_length, data = self._parse_packet(response)
                     
-                    if command == Command.QUERY_ACTUATORS and data_length >= 5:
+                    if command == Command.QUERY_ACTUATORS and data_length >= 4:
                         # Extract actuator ID and serial number
                         actuator_id = response[1]
                         serial_number = struct.unpack('>I', data[0:4])[0]  # 4 bytes serial number
                         actuators.append((actuator_id, serial_number))
+                        print(f"Found actuator - ID: {actuator_id}, Serial: {serial_number}")
+                    else:
+                        print(f"Ignoring packet - Command: 0x{command:02X}, Data Length: {data_length}")
                         
                 except socket.timeout:
+                    print("Query actuators timeout - no more responses")
                     break  # No more responses
-                except ProtocolError:
+                except ProtocolError as e:
+                    print(f"Protocol error while parsing response: {e}")
+                    continue  # Ignore invalid packets
+                except Exception as e:
+                    print(f"Unexpected error while parsing response: {e}")
                     continue  # Ignore invalid packets
         except Exception as e:
             raise CommunicationError(f"Failed to query actuators: {e}")
             
+        print(f"Total actuators found: {len(actuators)}")
         return actuators

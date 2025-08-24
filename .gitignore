@@ -152,3 +152,4 @@ dist/
 
 # innfos-python-sdk specific
 innfos_python_sdk.egg-info/
+innfos_python_sdk/__pycache__/

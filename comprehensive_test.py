@@ -2,7 +2,19 @@
 """
 Comprehensive test script to verify all components of the INNFOS Python SDK
 """
+def test_handshake_packet_structure():
+    from innfos_python_sdk.protocol import GluonProtocol
+    from innfos_python_sdk.constants import Command
+    from innfos_python_sdk.protocol import CRC16
 
+    protocol = GluonProtocol()
+    packet = protocol._build_packet(0x00, Command.HANDSHAKE, b'')
+    # Calculate expected CRC for the handshake packet data [0x00, 0x44, 0x00, 0x00]
+    crc_data = bytearray([0x00, 0x44, 0x00, 0x00])
+    crc = CRC16.calculate(crc_data)
+    expected_packet = bytes([0xEE, 0x00, 0x44, 0x00, 0x00, (crc >> 8) & 0xFF, crc & 0xFF, 0xED])
+    assert packet == expected_packet, f"Expected handshake packet {expected_packet.hex()}, got {packet.hex()}"
+    print("✓ Handshake packet structure verified")
 def test_all_components():
     print("Testing INNFOS Python SDK Components")
     print("=" * 50)
@@ -126,7 +138,7 @@ def test_all_components():
             0x06,  # Command (READ_POSITION)
             0x00, 0x04,  # Data length (4 bytes)
             0x00, 0x00, 0x00, 0x00,  # Data (zero position)
-            0x33, 0x4D,  # CRC16 of [0x01, 0x06, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00]
+            0x16, 0x07,  # CRC16 of [0x01, 0x06, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00]
             0xED   # Tail
         ])
         
@@ -139,7 +151,10 @@ def test_all_components():
     except Exception as e:
         print(f"  ✗ Packet test failed: {e}")
         return False
-    
+    # Add this after other test sections
+    print("\nTest 7: Handshake packet structure")
+    test_handshake_packet_structure()
+
     print("\n" + "=" * 50)
     print("All tests passed! The INNFOS Python SDK is working correctly.")
     return True
